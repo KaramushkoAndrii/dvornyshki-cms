@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts_form_data",
+  "info": {
+    "singularName": "contact-form-data",
+    "pluralName": "contacts-form-data",
+    "displayName": "contactFormData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "contactFormItem": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.contact-form",
+      "repeatable": true
+    }
+  }
+}

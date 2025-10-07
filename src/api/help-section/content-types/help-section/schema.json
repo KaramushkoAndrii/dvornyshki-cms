@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "help_sections",
+  "info": {
+    "singularName": "help-section",
+    "pluralName": "help-sections",
+    "displayName": "HelpSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "helpListItem": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.help",
+      "repeatable": true
+    }
+  }
+}

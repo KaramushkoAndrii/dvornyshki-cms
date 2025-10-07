@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "help_pages",
+  "info": {
+    "singularName": "help-page",
+    "pluralName": "help-pages",
+    "displayName": "HelpPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "helpListDetailed": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.help-list-detailed",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_lists_our_animals",
+  "info": {
+    "displayName": "ourAnimals"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "btnTitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "enumeration",
+      "enum": [
+        "cats",
+        "dogs"
+      ]
+    }
+  },
+  "config": {}
+}

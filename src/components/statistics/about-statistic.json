@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_statistics_about_statistics",
+  "info": {
+    "displayName": "about-statistic"
+  },
+  "options": {},
+  "attributes": {
+    "count": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

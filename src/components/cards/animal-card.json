@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_cards_animal_cards",
+  "info": {
+    "displayName": "Animal-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "age": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

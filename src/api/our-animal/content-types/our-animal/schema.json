@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_animals",
+  "info": {
+    "singularName": "our-animal",
+    "pluralName": "our-animals",
+    "displayName": "OurAnimal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "cats": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.our-animals",
+      "repeatable": true
+    },
+    "dogs": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.our-animals",
+      "repeatable": true
+    }
+  }
+}

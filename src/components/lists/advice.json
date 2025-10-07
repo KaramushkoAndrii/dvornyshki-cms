@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_lists_advice",
+  "info": {
+    "displayName": "advice"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

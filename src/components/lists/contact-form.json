@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_lists_contact_forms",
+  "info": {
+    "displayName": "contactForm"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "advice_sections",
+  "info": {
+    "singularName": "advice-section",
+    "pluralName": "advice-sections",
+    "displayName": "AdviceSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "adviceItem": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.advice",
+      "repeatable": true
+    }
+  }
+}

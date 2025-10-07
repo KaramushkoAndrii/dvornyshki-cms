@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_lists_helps",
+  "info": {
+    "displayName": "Help"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
