@@ -4,7 +4,7 @@
   "info": {
     "singularName": "dog",
     "pluralName": "dogs",
-    "displayName": "Animla"
+    "displayName": "Animal"
   },
   "options": {
     "draftAndPublish": true
@@ -109,6 +109,16 @@
         "cats",
         "dogs"
       ]
+    },
+    "weight": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "0",
+      "required": true
     }
   }
 }

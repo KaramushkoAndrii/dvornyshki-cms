@@ -611,7 +611,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
 export interface ApiDogDog extends Struct.CollectionTypeSchema {
   collectionName: 'dogs';
   info: {
-    displayName: 'Animla';
+    displayName: 'Animal';
     pluralName: 'dogs';
     singularName: 'dog';
   };
@@ -693,6 +693,14 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    weight: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'0'>;
   };
 }
 
