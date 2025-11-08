@@ -4,7 +4,7 @@
   "info": {
     "singularName": "dog",
     "pluralName": "dogs",
-    "displayName": "Animal"
+    "displayName": "Animla"
   },
   "options": {
     "draftAndPublish": true
@@ -47,9 +47,7 @@
         }
       },
       "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "moreImg": {
       "type": "media",
@@ -59,11 +57,7 @@
         }
       },
       "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
+      "allowedTypes": ["images", "files", "videos"]
     },
     "vaccine": {
       "type": "boolean",
@@ -105,10 +99,7 @@
           "localized": true
         }
       },
-      "enum": [
-        "cats",
-        "dogs"
-      ]
+      "enum": ["cats", "dogs"]
     },
     "weight": {
       "type": "string",
