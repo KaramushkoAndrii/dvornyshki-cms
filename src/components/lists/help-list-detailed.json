@@ -4,6 +4,35 @@
     "displayName": "helpListDetailed"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "subDescription": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "button",
+      "enum": [
+        "button",
+        "tel"
+      ]
+    },
+    "src": {
+      "type": "string"
+    },
+    "linkContent": {
+      "type": "string",
+      "default": "push",
+      "required": true
+    }
+  },
   "config": {}
 }

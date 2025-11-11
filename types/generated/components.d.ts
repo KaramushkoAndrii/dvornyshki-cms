@@ -61,7 +61,18 @@ export interface ListsHelpListDetailed extends Struct.ComponentSchema {
   info: {
     displayName: 'helpListDetailed';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    header: Schema.Attribute.String & Schema.Attribute.Required;
+    linkContent: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'push'>;
+    src: Schema.Attribute.String;
+    subDescription: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['button', 'tel']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'button'>;
+  };
 }
 
 export interface ListsOurAnimals extends Struct.ComponentSchema {
