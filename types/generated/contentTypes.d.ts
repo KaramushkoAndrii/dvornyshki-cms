@@ -553,6 +553,64 @@ export interface ApiContactHeroSectionContactHeroSection
   };
 }
 
+export interface ApiContactMainInfoContactMainInfo
+  extends Struct.SingleTypeSchema {
+  collectionName: 'contact_main_infos';
+  info: {
+    displayName: 'ContactMainInfo';
+    pluralName: 'contact-main-infos';
+    singularName: 'contact-main-info';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    header: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-main-info.contact-main-info'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    subDescription: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeader: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactContact extends Struct.SingleTypeSchema {
   collectionName: 'contacts';
   info: {
@@ -1459,6 +1517,7 @@ declare module '@strapi/strapi' {
       'api::advice-section.advice-section': ApiAdviceSectionAdviceSection;
       'api::contact-form-data.contact-form-data': ApiContactFormDataContactFormData;
       'api::contact-hero-section.contact-hero-section': ApiContactHeroSectionContactHeroSection;
+      'api::contact-main-info.contact-main-info': ApiContactMainInfoContactMainInfo;
       'api::contact.contact': ApiContactContact;
       'api::dog.dog': ApiDogDog;
       'api::help-page.help-page': ApiHelpPageHelpPage;
