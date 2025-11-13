@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_lists_rules_lists",
+  "info": {
+    "displayName": "RulesList"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "accordionRuleItem": {
+      "type": "component",
+      "component": "lists.accordion-rules",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

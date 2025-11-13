@@ -23,6 +23,17 @@ export interface ItemItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ListsAccordionRules extends Struct.ComponentSchema {
+  collectionName: 'components_lists_accordion_rules';
+  info: {
+    displayName: 'accordionItem';
+  };
+  attributes: {
+    content: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListsAdvice extends Struct.ComponentSchema {
   collectionName: 'components_lists_advice';
   info: {
@@ -87,6 +98,21 @@ export interface ListsOurAnimals extends Struct.ComponentSchema {
   };
 }
 
+export interface ListsRulesList extends Struct.ComponentSchema {
+  collectionName: 'components_lists_rules_lists';
+  info: {
+    displayName: 'RulesList';
+  };
+  attributes: {
+    accordionRuleItem: Schema.Attribute.Component<
+      'lists.accordion-rules',
+      true
+    >;
+    description: Schema.Attribute.String;
+    header: Schema.Attribute.String;
+  };
+}
+
 export interface StatisticsAboutStatistic extends Struct.ComponentSchema {
   collectionName: 'components_statistics_about_statistics';
   info: {
@@ -104,11 +130,13 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'cards.animal-card': CardsAnimalCard;
       'item.item': ItemItem;
+      'lists.accordion-rules': ListsAccordionRules;
       'lists.advice': ListsAdvice;
       'lists.contact-form': ListsContactForm;
       'lists.help': ListsHelp;
       'lists.help-list-detailed': ListsHelpListDetailed;
       'lists.our-animals': ListsOurAnimals;
+      'lists.rules-list': ListsRulesList;
       'statistics.about-statistic': StatisticsAboutStatistic;
     }
   }

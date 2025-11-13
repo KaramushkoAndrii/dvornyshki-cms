@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "rules_lists",
+  "info": {
+    "singularName": "rules-list",
+    "pluralName": "rules-lists",
+    "displayName": "RulesList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "header": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "header",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "RulesList": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "lists.accordion-rules",
+      "repeatable": true
+    }
+  }
+}

@@ -955,6 +955,57 @@ export interface ApiOurAnimalOurAnimal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiRulesListRulesList extends Struct.SingleTypeSchema {
+  collectionName: 'rules_lists';
+  info: {
+    displayName: 'RulesList';
+    pluralName: 'rules-lists';
+    singularName: 'rules-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    header: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'header'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::rules-list.rules-list'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    RulesList: Schema.Attribute.Component<'lists.accordion-rules', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSearchSectionSearchSection extends Struct.SingleTypeSchema {
   collectionName: 'search_sections';
   info: {
@@ -998,6 +1049,51 @@ export interface ApiSearchSectionSearchSection extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVisitedUsVisitedUs extends Struct.SingleTypeSchema {
+  collectionName: 'visited_uses';
+  info: {
+    displayName: 'VisitedUs';
+    pluralName: 'visited-uses';
+    singularName: 'visited-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visited-us.visited-us'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'header'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1524,7 +1620,9 @@ declare module '@strapi/strapi' {
       'api::help-section.help-section': ApiHelpSectionHelpSection;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::our-animal.our-animal': ApiOurAnimalOurAnimal;
+      'api::rules-list.rules-list': ApiRulesListRulesList;
       'api::search-section.search-section': ApiSearchSectionSearchSection;
+      'api::visited-us.visited-us': ApiVisitedUsVisitedUs;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

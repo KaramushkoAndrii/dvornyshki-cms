@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "visited_uses",
+  "info": {
+    "singularName": "visited-us",
+    "pluralName": "visited-uses",
+    "displayName": "VisitedUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "header",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
