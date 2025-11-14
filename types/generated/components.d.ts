@@ -29,7 +29,7 @@ export interface ListsAccordionRules extends Struct.ComponentSchema {
     displayName: 'accordionItem';
   };
   attributes: {
-    content: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

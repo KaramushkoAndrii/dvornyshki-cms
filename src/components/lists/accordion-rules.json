@@ -9,7 +9,7 @@
       "type": "string",
       "required": true
     },
-    "content": {
+    "description": {
       "type": "string",
       "required": true
     }
