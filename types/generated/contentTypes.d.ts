@@ -994,7 +994,7 @@ export interface ApiRulesListRulesList extends Struct.SingleTypeSchema {
       'api::rules-list.rules-list'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    RulesList: Schema.Attribute.Component<'lists.accordion-rules', true> &
+    rulesList: Schema.Attribute.Component<'lists.accordion-rules', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

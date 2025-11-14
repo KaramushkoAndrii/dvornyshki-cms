@@ -33,7 +33,7 @@
         }
       }
     },
-    "RulesList": {
+    "rulesList": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
