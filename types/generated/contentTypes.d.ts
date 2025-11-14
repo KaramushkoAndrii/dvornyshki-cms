@@ -580,7 +580,7 @@ export interface ApiContactMainInfoContactMainInfo
           localized: true;
         };
       }>;
-    header: Schema.Attribute.String &
+    headerInfo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

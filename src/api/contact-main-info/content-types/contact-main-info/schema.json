@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "header": {
+    "headerInfo": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
