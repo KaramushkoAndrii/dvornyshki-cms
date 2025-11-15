@@ -912,6 +912,67 @@ export interface ApiHeroSectionHeroSection extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
+  collectionName: 'maps_data';
+  info: {
+    displayName: '\u0414\u0430\u043D\u043D\u044B\u0435 \u043A\u0430\u0440\u0442\u044B';
+    pluralName: 'maps-data';
+    singularName: 'map-data';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    googleMapsLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    latitude: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::map-data.map-data'
+    >;
+    longitude: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    markerIcon: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    popupText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOurAnimalOurAnimal extends Struct.SingleTypeSchema {
   collectionName: 'our_animals';
   info: {
@@ -1619,6 +1680,7 @@ declare module '@strapi/strapi' {
       'api::help-page.help-page': ApiHelpPageHelpPage;
       'api::help-section.help-section': ApiHelpSectionHelpSection;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
+      'api::map-data.map-data': ApiMapDataMapData;
       'api::our-animal.our-animal': ApiOurAnimalOurAnimal;
       'api::rules-list.rules-list': ApiRulesListRulesList;
       'api::search-section.search-section': ApiSearchSectionSearchSection;
