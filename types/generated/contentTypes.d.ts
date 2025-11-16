@@ -943,6 +943,12 @@ export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
+    linkText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -954,12 +960,26 @@ export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
+    markerHeight: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<38>;
     markerIcon: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
+    markerWidth: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<38>;
     popupText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
