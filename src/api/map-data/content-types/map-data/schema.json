@@ -36,14 +36,6 @@
         }
       }
     },
-    "googleMapsLink": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "latitude": {
       "type": "float",
       "pluginOptions": {
