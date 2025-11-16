@@ -15,27 +15,11 @@
     }
   },
   "attributes": {
-    "latitude": {
-      "type": "decimal",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "longitude": {
-      "type": "decimal",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "markerIcon": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "multiple": false,
@@ -54,6 +38,22 @@
     },
     "googleMapsLink": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "latitude": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "longitude": {
+      "type": "float",
       "pluginOptions": {
         "i18n": {
           "localized": false

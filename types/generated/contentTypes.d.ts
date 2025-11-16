@@ -937,10 +937,10 @@ export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
-    latitude: Schema.Attribute.Decimal &
+    latitude: Schema.Attribute.Float &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -948,16 +948,16 @@ export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::map-data.map-data'
     >;
-    longitude: Schema.Attribute.Decimal &
+    longitude: Schema.Attribute.Float &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     markerIcon: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     popupText: Schema.Attribute.String &
