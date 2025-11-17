@@ -38,6 +38,14 @@
           "localized": true
         }
       }
+    },
+    "socialHeader": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
