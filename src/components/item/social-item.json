@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_item_social_items",
+  "info": {
+    "displayName": "socialItem"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

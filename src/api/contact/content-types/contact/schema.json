@@ -23,22 +23,6 @@
         }
       }
     },
-    "instagram": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "telegram": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "phone": {
       "type": "string",
       "pluginOptions": {
@@ -46,6 +30,16 @@
           "localized": true
         }
       }
+    },
+    "social": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "item.social-item",
+      "repeatable": true
     }
   }
 }

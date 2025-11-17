@@ -636,12 +636,6 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    instagram: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -654,7 +648,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    telegram: Schema.Attribute.String &
+    social: Schema.Attribute.Component<'item.social-item', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
