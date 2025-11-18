@@ -893,6 +893,15 @@ export interface ApiHeroSectionHeroSection extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::hero-section.hero-section'
     >;
+    mainVideo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     pageTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
