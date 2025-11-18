@@ -40,6 +40,16 @@
       },
       "component": "lists.help",
       "repeatable": true
+    },
+    "btn": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "item.link",
+      "repeatable": false
     }
   }
 }

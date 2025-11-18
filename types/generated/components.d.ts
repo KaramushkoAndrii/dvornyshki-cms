@@ -23,6 +23,17 @@ export interface ItemItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ItemLink extends Struct.ComponentSchema {
+  collectionName: 'components_item_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    href: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ItemSocialItem extends Struct.ComponentSchema {
   collectionName: 'components_item_social_items';
   info: {
@@ -141,6 +152,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'cards.animal-card': CardsAnimalCard;
       'item.item': ItemItem;
+      'item.link': ItemLink;
       'item.social-item': ItemSocialItem;
       'lists.accordion-rules': ListsAccordionRules;
       'lists.advice': ListsAdvice;

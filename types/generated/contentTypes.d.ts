@@ -830,6 +830,12 @@ export interface ApiHelpSectionHelpSection extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    btn: Schema.Attribute.Component<'item.link', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
