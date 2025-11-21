@@ -703,7 +703,7 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     category: Schema.Attribute.Enumeration<['cats', 'dogs']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
