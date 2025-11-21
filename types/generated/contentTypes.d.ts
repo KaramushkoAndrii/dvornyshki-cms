@@ -691,13 +691,13 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     animals: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     castration: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     category: Schema.Attribute.Enumeration<['cats', 'dogs']> &
@@ -718,7 +718,7 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     img: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -726,7 +726,7 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     moreImg: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     name: Schema.Attribute.String &
@@ -748,7 +748,7 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     vaccine: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     weight: Schema.Attribute.String &
