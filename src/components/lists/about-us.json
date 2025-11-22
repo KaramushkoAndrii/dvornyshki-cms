@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_lists_aboutuses",
+  "info": {
+    "displayName": "aboutUs"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string",
+      "default": "img",
+      "required": true
+    }
+  },
+  "config": {}
+}

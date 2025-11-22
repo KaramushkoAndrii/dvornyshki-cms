@@ -45,6 +45,20 @@ export interface ItemSocialItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ListsAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_lists_aboutuses';
+  info: {
+    displayName: 'aboutUs';
+  };
+  attributes: {
+    alt: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'img'>;
+    img: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListsAccordionRules extends Struct.ComponentSchema {
   collectionName: 'components_lists_accordion_rules';
   info: {
@@ -154,6 +168,7 @@ declare module '@strapi/strapi' {
       'item.item': ItemItem;
       'item.link': ItemLink;
       'item.social-item': ItemSocialItem;
+      'lists.about-us': ListsAboutUs;
       'lists.accordion-rules': ListsAccordionRules;
       'lists.advice': ListsAdvice;
       'lists.contact-form': ListsContactForm;
