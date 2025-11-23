@@ -110,14 +110,6 @@
         }
       }
     },
-    "weight": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "weight_text": {
       "type": "string",
       "pluginOptions": {
@@ -127,6 +119,14 @@
       }
     },
     "age": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "weight": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

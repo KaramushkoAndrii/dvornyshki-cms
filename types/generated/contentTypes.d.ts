@@ -801,10 +801,10 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    weight: Schema.Attribute.Integer &
+    weight: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }>;
     weight_text: Schema.Attribute.String &
