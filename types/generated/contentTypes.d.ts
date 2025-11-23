@@ -726,10 +726,10 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    age: Schema.Attribute.Integer &
+    age: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }>;
     age_text: Schema.Attribute.String &

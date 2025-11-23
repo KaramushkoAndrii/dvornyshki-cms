@@ -102,14 +102,6 @@
         "dogs"
       ]
     },
-    "age": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "age_text": {
       "type": "string",
       "pluginOptions": {
@@ -127,6 +119,14 @@
       }
     },
     "weight_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "age": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
