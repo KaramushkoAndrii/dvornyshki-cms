@@ -726,7 +726,13 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    age: Schema.Attribute.String &
+    age: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    age_text: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -795,14 +801,18 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    weight: Schema.Attribute.String &
-      Schema.Attribute.Required &
+    weight: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    weight_text: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }> &
-      Schema.Attribute.DefaultTo<'0'>;
+      }>;
   };
 }
 

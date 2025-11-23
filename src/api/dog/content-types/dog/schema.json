@@ -31,14 +31,6 @@
         }
       }
     },
-    "age": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "img": {
       "type": "media",
       "pluginOptions": {
@@ -110,15 +102,37 @@
         "dogs"
       ]
     },
-    "weight": {
+    "age": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "age_text": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "default": "0",
-      "required": true
+      }
+    },
+    "weight": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "weight_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
