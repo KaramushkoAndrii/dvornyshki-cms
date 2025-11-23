@@ -726,10 +726,10 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    age: Schema.Attribute.String &
+    age: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     age_text: Schema.Attribute.String &
@@ -801,10 +801,10 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    weight: Schema.Attribute.String &
+    weight: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     weight_text: Schema.Attribute.String &

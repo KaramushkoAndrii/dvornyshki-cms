@@ -118,19 +118,19 @@
         }
       }
     },
-    "age": {
-      "type": "string",
+    "weight": {
+      "type": "integer",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
-    "weight": {
-      "type": "string",
+    "age": {
+      "type": "integer",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     }
