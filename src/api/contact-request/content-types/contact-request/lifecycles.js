@@ -23,10 +23,9 @@ module.exports = {
           <p><b>Сообщение:</b><br/> ${result.message}</p>
         `,
       });
-
-      console.log("Email sent successfully!");
     } catch (err) {
       console.error("Failed to send email:", err);
+      console.error(JSON.stringify(err, null, 2));
     }
   },
 };
