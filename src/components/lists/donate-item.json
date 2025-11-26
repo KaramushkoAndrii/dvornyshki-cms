@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_lists_donate_items",
+  "info": {
+    "displayName": "donateItem"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "src": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

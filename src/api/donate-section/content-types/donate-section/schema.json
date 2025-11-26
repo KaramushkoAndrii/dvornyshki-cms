@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "donate_sections",
+  "info": {
+    "singularName": "donate-section",
+    "pluralName": "donate-sections",
+    "displayName": "DonateSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DonateItem": {
+      "type": "component",
+      "component": "lists.donate-item",
+      "repeatable": true
+    }
+  }
+}

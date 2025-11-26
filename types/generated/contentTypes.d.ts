@@ -850,6 +850,34 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDonateSectionDonateSection extends Struct.SingleTypeSchema {
+  collectionName: 'donate_sections';
+  info: {
+    displayName: 'DonateSection';
+    pluralName: 'donate-sections';
+    singularName: 'donate-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    DonateItem: Schema.Attribute.Component<'lists.donate-item', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::donate-section.donate-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHelpPageHelpPage extends Struct.SingleTypeSchema {
   collectionName: 'help_pages';
   info: {
@@ -1796,6 +1824,7 @@ declare module '@strapi/strapi' {
       'api::contact-request.contact-request': ApiContactRequestContactRequest;
       'api::contact.contact': ApiContactContact;
       'api::dog.dog': ApiDogDog;
+      'api::donate-section.donate-section': ApiDonateSectionDonateSection;
       'api::help-page.help-page': ApiHelpPageHelpPage;
       'api::help-section.help-section': ApiHelpSectionHelpSection;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;

@@ -93,6 +93,18 @@ export interface ListsContactForm extends Struct.ComponentSchema {
   };
 }
 
+export interface ListsDonateItem extends Struct.ComponentSchema {
+  collectionName: 'components_lists_donate_items';
+  info: {
+    displayName: 'donateItem';
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    src: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListsHelp extends Struct.ComponentSchema {
   collectionName: 'components_lists_helps';
   info: {
@@ -172,6 +184,7 @@ declare module '@strapi/strapi' {
       'lists.accordion-rules': ListsAccordionRules;
       'lists.advice': ListsAdvice;
       'lists.contact-form': ListsContactForm;
+      'lists.donate-item': ListsDonateItem;
       'lists.help': ListsHelp;
       'lists.help-list-detailed': ListsHelpListDetailed;
       'lists.our-animals': ListsOurAnimals;
