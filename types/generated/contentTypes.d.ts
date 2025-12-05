@@ -761,29 +761,36 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
   };
   attributes: {
     age: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
     age_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'years'>;
     animals: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     castration: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     category: Schema.Attribute.Enumeration<['cats', 'dogs']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -794,12 +801,14 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     gender: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     img: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -808,12 +817,14 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::dog.dog'>;
     moreImg: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
     name: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -821,6 +832,14 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    story: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -830,23 +849,28 @@ export interface ApiDogDog extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     vaccine: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     weight: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
     weight_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'kg'>;
   };
 }
 
@@ -1111,6 +1135,37 @@ export interface ApiMapDataMapData extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
+  collectionName: 'news_pages';
+  info: {
+    displayName: 'NewsPage';
+    pluralName: 'news-pages';
+    singularName: 'news-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-page.news-page'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1881,6 +1936,7 @@ declare module '@strapi/strapi' {
       'api::help-section.help-section': ApiHelpSectionHelpSection;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::map-data.map-data': ApiMapDataMapData;
+      'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::not-found.not-found': ApiNotFoundNotFound;
       'api::our-animal.our-animal': ApiOurAnimalOurAnimal;
       'api::rules-list.rules-list': ApiRulesListRulesList;
