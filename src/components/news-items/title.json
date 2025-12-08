@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_news_items_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

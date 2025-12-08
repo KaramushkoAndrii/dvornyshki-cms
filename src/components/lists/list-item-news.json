@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_lists_list_item_news",
+  "info": {
+    "displayName": "texts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

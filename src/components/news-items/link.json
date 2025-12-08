@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_news_items_links",
+  "info": {
+    "displayName": "link"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

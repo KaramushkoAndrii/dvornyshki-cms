@@ -14,5 +14,23 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "newsBlocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "news-items.title",
+        "news-items.text",
+        "news-items.slider",
+        "news-items.img",
+        "news-items.figure",
+        "news-items.video",
+        "news-items.link"
+      ]
+    }
+  }
 }

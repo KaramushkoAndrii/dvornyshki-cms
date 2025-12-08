@@ -1166,6 +1166,22 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::news-page.news-page'
     >;
+    newsBlocks: Schema.Attribute.DynamicZone<
+      [
+        'news-items.title',
+        'news-items.text',
+        'news-items.slider',
+        'news-items.img',
+        'news-items.figure',
+        'news-items.video',
+        'news-items.link',
+      ]
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -134,6 +134,17 @@ export interface ListsHelpListDetailed extends Struct.ComponentSchema {
   };
 }
 
+export interface ListsListItemNews extends Struct.ComponentSchema {
+  collectionName: 'components_lists_list_item_news';
+  info: {
+    displayName: 'texts';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ListsOurAnimals extends Struct.ComponentSchema {
   collectionName: 'components_lists_our_animals';
   info: {
@@ -158,6 +169,78 @@ export interface ListsRulesList extends Struct.ComponentSchema {
     >;
     description: Schema.Attribute.String;
     header: Schema.Attribute.String;
+  };
+}
+
+export interface NewsItemsFigure extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_figures';
+  info: {
+    displayName: 'figure';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images', true>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface NewsItemsImg extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_imgs';
+  info: {
+    displayName: 'img';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface NewsItemsLink extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface NewsItemsSlider extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_sliders';
+  info: {
+    displayName: 'slider';
+  };
+  attributes: {
+    slider: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface NewsItemsText extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_texts';
+  info: {
+    displayName: 'text';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface NewsItemsTitle extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_titles';
+  info: {
+    displayName: 'title';
+    icon: 'file';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface NewsItemsVideo extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_videos';
+  info: {
+    displayName: 'video';
+  };
+  attributes: {
+    video: Schema.Attribute.Media<'videos', true>;
   };
 }
 
@@ -187,8 +270,16 @@ declare module '@strapi/strapi' {
       'lists.donate-item': ListsDonateItem;
       'lists.help': ListsHelp;
       'lists.help-list-detailed': ListsHelpListDetailed;
+      'lists.list-item-news': ListsListItemNews;
       'lists.our-animals': ListsOurAnimals;
       'lists.rules-list': ListsRulesList;
+      'news-items.figure': NewsItemsFigure;
+      'news-items.img': NewsItemsImg;
+      'news-items.link': NewsItemsLink;
+      'news-items.slider': NewsItemsSlider;
+      'news-items.text': NewsItemsText;
+      'news-items.title': NewsItemsTitle;
+      'news-items.video': NewsItemsVideo;
       'statistics.about-statistic': StatisticsAboutStatistic;
     }
   }

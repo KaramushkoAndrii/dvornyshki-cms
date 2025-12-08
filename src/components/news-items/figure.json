@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_news_items_figures",
+  "info": {
+    "displayName": "figure"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
