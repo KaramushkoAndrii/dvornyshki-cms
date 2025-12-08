@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_news_items_texts",
+  "collectionName": "components_news_items_rich_texts",
   "info": {
-    "displayName": "text"
+    "displayName": "richText"
   },
   "options": {},
   "attributes": {
-    "text": {
+    "content": {
       "type": "richtext"
     }
   },

@@ -1169,12 +1169,11 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
     newsBlocks: Schema.Attribute.DynamicZone<
       [
         'news-items.title',
-        'news-items.text',
         'news-items.slider',
-        'news-items.img',
+        'news-items.rich-text',
+        'news-items.img-and-text',
         'news-items.figure',
         'news-items.video',
-        'news-items.link',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

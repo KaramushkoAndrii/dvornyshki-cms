@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "slider": {
+    "img": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [

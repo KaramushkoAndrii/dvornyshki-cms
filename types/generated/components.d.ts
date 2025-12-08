@@ -183,23 +183,25 @@ export interface NewsItemsFigure extends Struct.ComponentSchema {
   };
 }
 
-export interface NewsItemsImg extends Struct.ComponentSchema {
-  collectionName: 'components_news_items_imgs';
+export interface NewsItemsImgAndText extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_img_and_texts';
   info: {
-    displayName: 'img';
+    displayName: 'img-and-text';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     img: Schema.Attribute.Media<'images'>;
+    imgPosition: Schema.Attribute.Enumeration<['left', 'right']>;
   };
 }
 
-export interface NewsItemsLink extends Struct.ComponentSchema {
-  collectionName: 'components_news_items_links';
+export interface NewsItemsRichText extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_rich_texts';
   info: {
-    displayName: 'link';
+    displayName: 'richText';
   };
   attributes: {
-    url: Schema.Attribute.String;
+    content: Schema.Attribute.RichText;
   };
 }
 
@@ -209,17 +211,7 @@ export interface NewsItemsSlider extends Struct.ComponentSchema {
     displayName: 'slider';
   };
   attributes: {
-    slider: Schema.Attribute.Media<'images', true>;
-  };
-}
-
-export interface NewsItemsText extends Struct.ComponentSchema {
-  collectionName: 'components_news_items_texts';
-  info: {
-    displayName: 'text';
-  };
-  attributes: {
-    text: Schema.Attribute.RichText;
+    img: Schema.Attribute.Media<'images', true>;
   };
 }
 
@@ -227,7 +219,6 @@ export interface NewsItemsTitle extends Struct.ComponentSchema {
   collectionName: 'components_news_items_titles';
   info: {
     displayName: 'title';
-    icon: 'file';
   };
   attributes: {
     title: Schema.Attribute.String;
@@ -240,7 +231,8 @@ export interface NewsItemsVideo extends Struct.ComponentSchema {
     displayName: 'video';
   };
   attributes: {
-    video: Schema.Attribute.Media<'videos', true>;
+    description: Schema.Attribute.Text;
+    link: Schema.Attribute.String;
   };
 }
 
@@ -274,10 +266,9 @@ declare module '@strapi/strapi' {
       'lists.our-animals': ListsOurAnimals;
       'lists.rules-list': ListsRulesList;
       'news-items.figure': NewsItemsFigure;
-      'news-items.img': NewsItemsImg;
-      'news-items.link': NewsItemsLink;
+      'news-items.img-and-text': NewsItemsImgAndText;
+      'news-items.rich-text': NewsItemsRichText;
       'news-items.slider': NewsItemsSlider;
-      'news-items.text': NewsItemsText;
       'news-items.title': NewsItemsTitle;
       'news-items.video': NewsItemsVideo;
       'statistics.about-statistic': StatisticsAboutStatistic;

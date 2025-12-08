@@ -1,8 +1,7 @@
 {
   "collectionName": "components_news_items_titles",
   "info": {
-    "displayName": "title",
-    "icon": "file"
+    "displayName": "title"
   },
   "options": {},
   "attributes": {
