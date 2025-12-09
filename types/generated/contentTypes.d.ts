@@ -1166,14 +1166,37 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::news-page.news-page'
     >;
-    newsBlocks: Schema.Attribute.DynamicZone<
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNewsPostNewsPost extends Struct.SingleTypeSchema {
+  collectionName: 'news_posts';
+  info: {
+    displayName: 'NewsPost';
+    pluralName: 'news-posts';
+    singularName: 'news-post';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    body: Schema.Attribute.DynamicZone<
       [
+        'news-items.video',
         'news-items.title',
         'news-items.slider',
         'news-items.rich-text',
         'news-items.img-and-text',
         'news-items.figure',
-        'news-items.video',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1181,7 +1204,49 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-post.news-post'
+    >;
+    published: Schema.Attribute.Date &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1952,6 +2017,7 @@ declare module '@strapi/strapi' {
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::map-data.map-data': ApiMapDataMapData;
       'api::news-page.news-page': ApiNewsPageNewsPage;
+      'api::news-post.news-post': ApiNewsPostNewsPost;
       'api::not-found.not-found': ApiNotFoundNotFound;
       'api::our-animal.our-animal': ApiOurAnimalOurAnimal;
       'api::rules-list.rules-list': ApiRulesListRulesList;
