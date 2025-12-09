@@ -1173,7 +1173,7 @@ export interface ApiNewsPageNewsPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiNewsPostNewsPost extends Struct.SingleTypeSchema {
+export interface ApiNewsPostNewsPost extends Struct.CollectionTypeSchema {
   collectionName: 'news_posts';
   info: {
     displayName: 'NewsPost';
@@ -1204,16 +1204,17 @@ export interface ApiNewsPostNewsPost extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    cover: Schema.Attribute.Media<'images'> &
+    cover: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String &
+    description: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1229,7 +1230,7 @@ export interface ApiNewsPostNewsPost extends Struct.SingleTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
