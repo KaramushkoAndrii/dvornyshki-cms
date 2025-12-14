@@ -5,11 +5,16 @@
   },
   "options": {},
   "attributes": {
-    "link": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
     }
   },
   "config": {}

@@ -232,7 +232,7 @@ export interface NewsItemsVideo extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    link: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'videos'>;
   };
 }
 
