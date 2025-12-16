@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_news_items_slider_and_texts",
+  "info": {
+    "displayName": "slider-and-text"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

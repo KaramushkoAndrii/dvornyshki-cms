@@ -215,6 +215,17 @@ export interface NewsItemsSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface NewsItemsSliderAndText extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_slider_and_texts';
+  info: {
+    displayName: 'slider-and-text';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    img: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 export interface NewsItemsTitle extends Struct.ComponentSchema {
   collectionName: 'components_news_items_titles';
   info: {
@@ -269,6 +280,7 @@ declare module '@strapi/strapi' {
       'news-items.img-and-text': NewsItemsImgAndText;
       'news-items.rich-text': NewsItemsRichText;
       'news-items.slider': NewsItemsSlider;
+      'news-items.slider-and-text': NewsItemsSliderAndText;
       'news-items.title': NewsItemsTitle;
       'news-items.video': NewsItemsVideo;
       'statistics.about-statistic': StatisticsAboutStatistic;
