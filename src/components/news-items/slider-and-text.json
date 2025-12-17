@@ -14,6 +14,14 @@
     },
     "description": {
       "type": "text"
+    },
+    "sliderPosition": {
+      "type": "enumeration",
+      "default": "left",
+      "enum": [
+        "left",
+        "right"
+      ]
     }
   },
   "config": {}

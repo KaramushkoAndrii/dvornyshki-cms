@@ -223,6 +223,8 @@ export interface NewsItemsSliderAndText extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     img: Schema.Attribute.Media<'images', true>;
+    sliderPosition: Schema.Attribute.Enumeration<['left', 'right']> &
+      Schema.Attribute.DefaultTo<'left'>;
   };
 }
 
