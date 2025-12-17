@@ -1198,6 +1198,7 @@ export interface ApiNewsPostNewsPost extends Struct.CollectionTypeSchema {
         'news-items.img-and-text',
         'news-items.figure',
         'news-items.slider-and-text',
+        'news-items.figure-and-text',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

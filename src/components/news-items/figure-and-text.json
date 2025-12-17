@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_news_items_figure_and_texts",
+  "info": {
+    "displayName": "figure-and-text"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    },
+    "imgPosition": {
+      "type": "enumeration",
+      "default": "right",
+      "enum": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "config": {}
+}

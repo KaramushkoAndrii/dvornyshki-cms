@@ -183,6 +183,20 @@ export interface NewsItemsFigure extends Struct.ComponentSchema {
   };
 }
 
+export interface NewsItemsFigureAndText extends Struct.ComponentSchema {
+  collectionName: 'components_news_items_figure_and_texts';
+  info: {
+    displayName: 'figure-and-text';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images'>;
+    imgPosition: Schema.Attribute.Enumeration<['right', 'left']> &
+      Schema.Attribute.DefaultTo<'right'>;
+    text: Schema.Attribute.Blocks;
+  };
+}
+
 export interface NewsItemsImgAndText extends Struct.ComponentSchema {
   collectionName: 'components_news_items_img_and_texts';
   info: {
@@ -279,6 +293,7 @@ declare module '@strapi/strapi' {
       'lists.our-animals': ListsOurAnimals;
       'lists.rules-list': ListsRulesList;
       'news-items.figure': NewsItemsFigure;
+      'news-items.figure-and-text': NewsItemsFigureAndText;
       'news-items.img-and-text': NewsItemsImgAndText;
       'news-items.rich-text': NewsItemsRichText;
       'news-items.slider': NewsItemsSlider;
