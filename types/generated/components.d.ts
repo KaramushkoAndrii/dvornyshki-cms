@@ -215,7 +215,7 @@ export interface NewsItemsRichText extends Struct.ComponentSchema {
     displayName: 'richText';
   };
   attributes: {
-    content: Schema.Attribute.RichText;
+    content: Schema.Attribute.Blocks;
   };
 }
 
