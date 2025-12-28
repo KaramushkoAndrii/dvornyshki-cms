@@ -1194,7 +1194,6 @@ export interface ApiNewsPostNewsPost extends Struct.CollectionTypeSchema {
         'news-items.video',
         'news-items.title',
         'news-items.slider',
-        'news-items.rich-text',
         'news-items.img-and-text',
         'news-items.figure',
         'news-items.slider-and-text',
