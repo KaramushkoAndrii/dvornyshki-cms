@@ -79,7 +79,8 @@
         "news-items.img-and-text",
         "news-items.figure",
         "news-items.slider-and-text",
-        "news-items.figure-and-text"
+        "news-items.figure-and-text",
+        "news-items.rich-text"
       ]
     }
   }
